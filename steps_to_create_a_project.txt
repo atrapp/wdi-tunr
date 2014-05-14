@@ -1,0 +1,78 @@
+in your projects folder (code/wdi/projects):
+--------------------------------------------
+
+### PHASE 1 ###
+
+rails new <app-name> -d postgresql -T
+cd <app-name>
+
+git init
+git add .
+git commit -m "Rails app started"
+
+
+bin/rake db:create
+
+#######  Set up remote repository on GitHub #######
+
+- github.com
+- create new repo
+- copied the git@github.com< ... >
+
+
+
+git remote add origin git@github.com< ...>
+git push origin master
+
+# git remote -v      (shows the remote repo)
+
+heroku create <your wishname>
+git push heroku master
+
+
+### PHASE 2 ###
+
+Gemfile
+-------
+
+group :development, :test do
+
+gem 'pry'
+gem 'pry-nav'
+gem 'rspec-rails'
+end
+
+gem 'rails_12factor'
+---------------
+
+bundle
+
+rails g rspec:install
+
+rails g model Song
+
+    edit model
+
+bin/rake db:migrate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
