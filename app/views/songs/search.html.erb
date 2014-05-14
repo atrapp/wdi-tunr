@@ -1,0 +1,15 @@
+
+
+<% @songs.each do |song| %>
+
+    <div class="twelve columns bg-blue">
+    
+        <div class="three columns bg-red">
+            <h2><%= song[:title] %></h2>
+        </div>
+        <img src="<%= song[:artwork_url] %>" alt="">
+
+    </div>
+    <div class="row bg-yellow"></div>
+    
+<% end %>
