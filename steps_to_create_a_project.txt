@@ -58,6 +58,48 @@ bin/rake db:migrate
 
 
 
+Many-to-many Relationship
+-------------------------
+1) create a migration (joiner table), e.g.
+rails g migration create_listeners_songs
+
+and put the two references into it:
+
+  t.references :song
+  t.references :listener
+
+2) put a method "has_and_belongs_to_many" in each model (Listener and Song)
+
+it will generate all the methods needed for the many to many relationship 
+between songs and listeners
+
+
+
+Temporary solution for user authentication
+---------------------------------------
+
+put the following in the Application Controller:
+
+def current_listener
+  @current_listener = Listener.first
+end
+
+
+
+
+to seed the heroku version of the app
+--------------------------------------
+heroku open
+  just redirects to the web platform
+
+heroku run rake db:migrate
+heroku run rake db:seed
+
+
+
+
+
+
 
 
 
